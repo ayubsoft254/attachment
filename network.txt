@@ -1,0 +1,30 @@
+network:
+version: 2
+ethernets:
+enp2s0:
+dhcp4: false
+vlans:
+v100:
+id: 100
+link: enp2s0
+addresses: [41.89.130.21/24]
+routes:
+- to: default
+via: 41.89.130.1
+nameservers:
+addresses: [41.204.164.3]
+dhcp4: false
+dhcp6: false
+v4:
+id: 4
+link: enp2s0
+addresses: [172.16.63.64/19]
+routes:
+- to: default
+via: 172.16.63.254
+table: 101
+routing-policy:
+- from: 172.16.63.64
+table: 101
+dhcp4: false
+dhcp6: false
