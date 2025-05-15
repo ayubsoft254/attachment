@@ -1,2 +1,3 @@
 this is a text file
 pre eliminate
+this is a new line
